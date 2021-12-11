@@ -1,0 +1,21 @@
+# version: '3'
+# services:
+#   web:
+#     network_mode: host
+#     build: 
+#       context: .
+#       dockerfile: Dockerfile.dev
+#       network: host
+#     ports:
+#       - "4001:4001"
+
+version: '3'
+services:
+  web:
+    network_mode: host
+    build: 
+      context: .
+      network: host
+    ports:
+      - "4001:4001"
+    command: "npm run start"
